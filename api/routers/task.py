@@ -29,7 +29,9 @@ async def create_task(
 # Todoリストの編集
 @router.put("/tasks/{task_id}", response_model=task_schema.TaskCreateResponse)
 async def update_task(
-    task_id: int, task_body: task_schema.TaskCreate, db: AsyncSession = Depends(get_db)
+    task_id: int,
+    task_body: task_schema.TaskCreateResponse,
+    db: AsyncSession = Depends(get_db),
 ):
     task = await task_crud.get_task(db, task_id=task_id)
     if task is None:
