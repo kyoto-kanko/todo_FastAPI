@@ -1,0 +1,25 @@
+version: '3'
+services:
+  todo-app:
+    build: .
+    volumes:
+      - .dockervenv:/src/.venv
+      - .:/src
+    ports:
+      - 8000:8000
+  db:
+    image: mysql:8.0
+    platform: linux/x86_64
+    environment:
+      # rootアカウントをパスワードなしで作成
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+      MYSQL_DATABASE: 'todo'
+      TZ: 'Asia/Tokyo'
+    volumes:
+      - mysql_data:/var/lib/mysql
+    # MySQL8.0ではデフォルトが"caching_sha2_password"で、ドライバが非対応のため変更
+    command: --default-authentication-plugin=mysql_native_password
+    ports:
+      - 33306:3306
+volumes:
+  mysql_data:
