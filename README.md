@@ -4,17 +4,18 @@
 ```
 docker compose build --no-cache
 ```
+docker起動
+```
+docker compose up
+```
 DB作成
 ```
 docker compose exec todo-app poetry run python -m api.migrate_db
-```
-docker立ち上げ
-```
-docker compose up
 ```
 DB接続
 ```
 docker compose exec db mysql todo
 ```
+
 ## APIドキュメント
 http://localhost:8000/docs
