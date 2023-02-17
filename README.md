@@ -1,5 +1,5 @@
 # todo_FastAPI
-## 以下の手順で立ち上げ
+## 以下の手順で立ち上げ!
 poetryのインストール
 ```
 docker-compose run --entrypoint "poetry install" todo-app
