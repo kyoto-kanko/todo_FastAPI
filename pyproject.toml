@@ -9,7 +9,7 @@ python = "^3.9"
 fastapi = ">=0.78,<0.97"
 uvicorn = {extras = ["standard"], version = ">=0.17.6,<0.21.0"}
 SQLAlchemy = ">=1.4.36,<3.0.0"
-aiomysql = "^0.1.1"
+aiomysql = ">=0.1.1,<0.3.0"
 python-jose = "^3.3.0"
 passlib = "^1.7.4"
 bcrypt = ">=3.2.2,<5.0.0"
