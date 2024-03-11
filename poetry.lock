@@ -264,24 +264,23 @@ all = ["email-validator (>=2.0.0)", "httpx (>=0.23.0)", "itsdangerous (>=1.1.0)"
 
 [[package]]
 name = "fastapi-login"
-version = "1.9.0"
+version = "1.10.0"
 description = "Flask-Login like package for FastAPI"
 optional = false
 python-versions = ">=3.8,<4.0"
 files = [
-    {file = "fastapi_login-1.9.0-py3-none-any.whl", hash = "sha256:93180a89c33f68545a0067543b566f842f1a827565f06d0b632246ac54ec646c"},
-    {file = "fastapi_login-1.9.0.tar.gz", hash = "sha256:89f804c2ab089f38a21aa2a5b59aeb068c6a7c8d31729ad8168b01161b90e815"},
+    {file = "fastapi_login-1.10.0-py3-none-any.whl", hash = "sha256:bb2a0fa37920f9413e7ee82c3c8114b73341dcd664db36640ed71287c5454730"},
+    {file = "fastapi_login-1.10.0.tar.gz", hash = "sha256:ba38fec1a78ca81200bdaad442fea8ad88b9d38b02e012a827524fa5b86479c2"},
 ]
 
 [package.dependencies]
 anyio = {version = ">=3.6.2,<4.0.0", extras = ["trio"]}
 fastapi = "*"
-passlib = {version = "*", extras = ["bcrypt"]}
 pyjwt = ">=2.4,<3.0"
 typing-extensions = ">=4.1.1,<5.0.0"
 
 [package.extras]
-asymmetric = ["cryptography (>=39.0.1,<40.0.0)"]
+asymmetric = ["cryptography (>=39.0.1,<43.0.0)"]
 
 [[package]]
 name = "greenlet"
@@ -449,9 +448,6 @@ files = [
     {file = "passlib-1.7.4-py2.py3-none-any.whl", hash = "sha256:aa6bca462b8d8bda89c70b382f0c298a20b5560af6cbfa2dce410c0a2fb669f1"},
     {file = "passlib-1.7.4.tar.gz", hash = "sha256:defd50f72b65c5402ab2c573830a6978e5f202ad0d984793c8dde2c4152ebe04"},
 ]
-
-[package.dependencies]
-bcrypt = {version = ">=3.1.0", optional = true, markers = "extra == \"bcrypt\""}
 
 [package.extras]
 argon2 = ["argon2-cffi (>=18.2.0)"]
